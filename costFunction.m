@@ -15,6 +15,7 @@ grad = zeros(size(theta));
 h = sigmoid(X * theta);
 diffTerm = h - y;
 grad = diffTerm' * X;
+grad = grad / m;
 
 % Calculating Cost Fuction = -1/m sum(ylog(h(x)) + (1-y)log(1-h(x)))
 
